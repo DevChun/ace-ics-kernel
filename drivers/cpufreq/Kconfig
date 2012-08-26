@@ -142,6 +142,13 @@ config CPU_FREQ_DEFAULT_GOV_SAVAGEDZEN
 	help
 	  Use the CPUFreq governor 'savagedzen' as default.
 
+config CPU_FREQ_DEFAULT_GOV_SCARY
+	bool "scary"
+	select CPU_FREQ_GOV_SCARY
+	select CPU_FREQ_GOV_SCARY
+	help
+	  Use the CPUFreq governor 'scary' as default
+
 endchoice
 
 config CPU_FREQ_GOV_PERFORMANCE
@@ -333,6 +340,13 @@ config CPU_FREQ_GOV_INTELLIDEMAND
 config CPU_FREQ_GOV_SAVAGEDZEN
 	tristate "'savagedzen' cpufreq governor"
 	depends on CPU_FREQ
+
+config CPU_FREQ_GOV_SCARY
+	tristate "'scary' cpufreq governor"
+	depends on CPU_FREQ
+	help
+	  scary - a governor for cabbages
+	  If in doubt, say N.
 
 config CPU_FREQ_VDD_LEVELS
   	bool "CPU Vdd levels sysfs interface"
