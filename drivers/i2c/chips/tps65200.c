@@ -703,6 +703,9 @@ static void tps65200_int_func(struct work_struct *work)
 			tps65200_set_chg_stat(0);
 			tps65200_i2c_write_byte(0x29, 0x01);
 			tps65200_i2c_write_byte(0x28, 0x00);
+#if (defined(CONFIG_BATTERY_DS2746) && (!defined(CONFIG_MACH_SPADE)))
+			reverse_protection_handler(REVERSE_PROTECTION_HAPPEND);
+#endif
 			send_tps_chg_int_notify(CHECK_INT2, 1);
 			cancel_delayed_work(&chg_int_data->int_work);
 			enable_irq(chg_int_data->gpio_chg_int);
