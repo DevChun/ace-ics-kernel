@@ -37,7 +37,7 @@
  *  run vmstat and monitor the context-switches (cs) field)
  */
 unsigned int sysctl_sched_latency = 3200000ULL;
-+unsigned int normalized_sysctl_sched_latency = 3200000ULL;
+unsigned int normalized_sysctl_sched_latency = 3200000ULL;
 
 /*
  * The initial- and re-scaling of tunables is configurable
