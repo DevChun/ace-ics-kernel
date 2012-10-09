@@ -1,6 +1,6 @@
 #
 # Automatically generated make config: don't edit
-# Linux/arm 3.0.44 Kernel Configuration
+# Linux/arm 3.0.45 Kernel Configuration
 #
 CONFIG_ARM=y
 CONFIG_SYS_SUPPORTS_APM_EMULATION=y
@@ -43,7 +43,7 @@ CONFIG_HAVE_KERNEL_LZO=y
 CONFIG_KERNEL_GZIP=y
 # CONFIG_KERNEL_LZMA is not set
 # CONFIG_KERNEL_LZO is not set
-CONFIG_DEFAULT_HOSTNAME="prosperous"
+CONFIG_DEFAULT_HOSTNAME="(none)"
 CONFIG_SWAP=y
 # CONFIG_SYSVIPC is not set
 # CONFIG_POSIX_MQUEUE is not set
